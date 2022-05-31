@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+        <!-- PANTALLA INICIAL -->
+
+        <div class="fondo1" id="pantalla1">
+        
+            <div class="pressButton">
+                <h1 class="pulsaBotonStart" onclick="screenSwitch('pantalla2')">PRESS START</h1>
+            </div>
+        </div>
+
+        <!-- SELECCION DE PERSONAJES -->
+    <div id="pantalla2"> 
+        <div class="parteAbajo">  
+            <div  class="seleccionDeJugadores">
+                <img onclick="elige('mario')" id="mario" class="imagenescoches"  src="/img/coche_mariosinfondo.png" alt="">
+                <img onclick="elige('luigi')" id="luigi" class="imagenescoches"  src="/img/coche_luigisinfondo.png" alt="">
+                <img onclick="elige('princesa')" id="princesa" class="imagenescoches"  src="/img/princesasinfondo.png" alt="">
+                <img onclick="elige('larry')" id="larry" class="imagenescoches"  src="/img/bowsersinfondo3.png" alt="">
+            </div>
+            <div class="parteAbajo">
+                <div class="nombresparticipantes">
+                    <h1 class="nombresDebajoCoches">MARIO</h1>
+                    <h1 class="nombresDebajoCoches">LUIGI</h1>
+                    <h1 class="nombresDebajoCoches">PRINCESA</h1>
+                    <h1 class="nombresDebajoCoches">BOWSER</h1>
+                </div>
+            </div>
+            <div class="pressButton">
+                <h1 id="select" class="pulsaBotonSelect" onclick="screenSwitch('pantalla3')">SELECT PLAYER</h1>
+                
+            </div> 
+        </div>
+
+    </div>
+                <!-- PANTALLA DE CORREDORES -->
+
+        <div class="fondo3" id="pantalla3">
+            <!-- BORRAR LINEA DESPUES DE COMPROBAR SI FUNCIONA -->
+            <!-- <h1 class="pulsaBotons" onclick="borrar()">PRESS SELECT</h1> -->
+            <h1 class="pulsaBotons">PRESS SELECT</h1>
+            <div id="imagenbandera">
+            </div>
+            <div id="divmarcadores">
+                <div id="marcadoresp1">
+                </div>
+                <div id="marcadoresp2">
+                </div>
+            </div>
+            <div id="pedalesacelerar" onclick="start()"></div>
+            
+            <div id="aparecer" class="posicioncoches">
+            <!-- aqui van las imagenes de los jugadores preseleccionados -->
+            </div>
+
+            
+        </div>
+
+                    <!-- PANTALLA DEL GANADOR -->
+        <div id="pantalla4">
+            
+        </div>
+
+    
+
+    <script src="/js/Vehiculo.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
