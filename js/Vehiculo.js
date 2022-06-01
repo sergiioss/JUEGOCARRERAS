@@ -24,10 +24,10 @@ class Vehiculo{
 
         //CREAR PERSONAJES
 
-        let mario = new Vehiculo("Mario", 4, "Kart", "derrape1","mariocompeti"); 
-        let luigi = new Vehiculo("Luigi", 4, "Coche antiguo", "derrape2","luigicompeti"); 
-        let princesa = new Vehiculo("Princesa", 2, "Moto", "derrape9","princesacompeti");
-        let larry = new Vehiculo("Larry", 4, "Kart3", "derrape4","larrycompeti");
+        let mario = new Vehiculo("Mario", 4, "Kart", "derrape1","mariobarra"); 
+        let luigi = new Vehiculo("Luigi", 4, "Coche antiguo", "derrape2","luigibarra"); 
+        let princesa = new Vehiculo("Princesa", 2, "Moto", "derrape9","princesabarra");
+        let larry = new Vehiculo("Larry", 4, "Kart3", "derrape4","larrybarra");
 
         //DICCIONARIO DE LOS PERSONAJES
         let players = {

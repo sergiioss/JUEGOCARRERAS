@@ -14,8 +14,12 @@ const screenSwitch = (pantallaDestino) => {
 
 
 let corredores = document.getElementById('aparecer');
+let cabezabarrasIzquierda = document.getElementById('marcadoresp1');
+let cabezabarrasDerecha = document.getElementById('marcadoresp2');
 let avanzar1 = document.getElementById('marcadoresp1');
 let avanzar2 = document.getElementById('marcadoresp2');
+let ganador = document.getElementById('ganador');
+let nombreganador = document.getElementById('nombreganador');
 let seleccion = [];
 
 const borrar = () =>{
@@ -40,6 +44,8 @@ const elige = (seleccionado) => {
             }
             setTimeout(()=>{
             corredores.innerHTML = `<div class='hijoVersus'><img class="peque" src='img/${seleccion[0].nombre}.png' alt=''></div><div class='hijoVersus'><img class="peque" src='img/${seleccion[1].nombre}.png' alt=''></div>`;
+            cabezabarrasIzquierda.innerHTML = `<img id="cabezabarrasIzquierda" src='img/${seleccion[0].nombreFoto}.png'>`
+            cabezabarrasDerecha.innerHTML = `<img id="cabezabarrasDerecha" src='img/${seleccion[1].nombreFoto}.png'>`
             },100);
         };
 
@@ -50,7 +56,8 @@ const start = () => {
         console.log('ganador')
         
         setTimeout(()=>{
-
+            ganador.innerHTML = `<img id="ganador" src='img/${seleccion[random].nombre}.gif' alt=''>`;
+            nombreganador.innerHTML = seleccion[random].nombre;
         screenSwitch('pantalla4');
             
         },300);

@@ -117,22 +117,33 @@ body{
 }
 #marcadoresp1{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     background-color: black;
     border-radius: 2em 2em 2em 2em;
     height: 3em;
-    width: 3em;
+    width: 2em;
 }
 #marcadoresp2{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: bisque;
     border-radius: 2em 2em 2em 2em;
     height: 3em;
+    width: 2em;
+}
+#cabezabarrasIzquierda{
+    display: flex;
+    height: 3em;
     width: 3em;
 }
+#cabezabarrasDerecha{
+    display: flex;
+    height: 3em;
+    width: 3em;
+}
+
 #imagenbandera{
     display: flex;
     justify-content: center;
@@ -155,6 +166,18 @@ body{
     display: none;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
-    background-color: brown;
+    background-color: red;
+}
+#nombreganador{
+    display: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+}
+#cabezabarras{
+    display: flex;
+    height: 3em;
+    width: 3em;
 }
