@@ -19,7 +19,10 @@ let cabezabarrasDerecha = document.getElementById('marcadoresp2');
 let avanzar1 = document.getElementById('marcadoresp1');
 let avanzar2 = document.getElementById('marcadoresp2');
 let ganador = document.getElementById('ganador');
+let cambiocolorfrenada = document.getElementById('');
 let nombreganador = document.getElementById('nombreganador');
+let contadorsuper1 = 0;
+let contadorsuper2 = 0;
 let seleccion = [];
 
 const borrar = () =>{
@@ -51,10 +54,31 @@ const elige = (seleccionado) => {
 
 const start = () => {
     let random = Math.round(Math.random());
+    let frenada = Math.round(Math.random()*3);
+    
     seleccion[random].acelerar();
+    if(contadorsuper1 >= 3 && contadorsuper2 >= 3){
+        console.log('holhola')
+        seleccion[0].super();
+        seleccion[1].super();
+        corredores.innerHTML = `<img class="super" src='img/${seleccion[0].nombreSuper}.png' alt=''></img><img class="peque" src='img/${seleccion[1].nombreSuper}.png' alt=''>`;
+        avanzar1.style.width =`${seleccion[0].kms}em`;
+        avanzar1.style.width =`${seleccion[1].kms}em`;
+    }
+    if(contadorsuper1 == 3 && random == 0){
+        console.log('SUPER1')
+        seleccion[0].super();
+        corredores.innerHTML = `<img class="super" src='img/${seleccion[0].nombreSuper}.png' alt=''></img><img class="peque" src='img/${seleccion[1].nombre}.png' alt=''>`;
+        avanzar1.style.width =`${seleccion[0].kms}em`;
+    }else if(contadorsuper2 == 3 && random == 1){
+        console.log('SUPER2')
+        seleccion[1].super();
+        corredores.innerHTML = `<img class="peque" src='img/${seleccion[0].nombre}.png' alt=''><img class="super" src='img/${seleccion[1].nombreSuper}.png' alt=''></img>`;
+        console.log(seleccion[1]);
+        avanzar1.style.width =`${seleccion[1].kms}em`;
+    }
     if(seleccion[random].kms >= 35){
         console.log('ganador')
-        
         setTimeout(()=>{
             ganador.innerHTML = `<img id="ganador" src='img/${seleccion[random].nombre}.gif' alt=''>`;
             nombreganador.innerHTML = seleccion[random].nombre;
@@ -63,12 +87,34 @@ const start = () => {
         },300);
     };
     if(random == 0){
-        console.log("corredor1 avanza")
+       console.log("corredor1 avanza")
        avanzar1.style.width =`${seleccion[0].kms}em`;
+       if(frenada == 3){
+        seleccion[0].derrape();
+        corredores.innerHTML = `<img class="peque" src='img/${seleccion[0].nombreFrenada}.png' alt=''><img class="frenada" src='img/${seleccion[1].nombre}.png' alt=''></img>`;
+        avanzar1.style.width =`${seleccion[0].kms}em`;
+        contadorsuper1 ++;
+        setTimeout ( ()=>{
+        corredores.innerHTML = `<img class="peque" src='img/${seleccion[0].nombre}.png' alt=''><img class="frenada" src='img/${seleccion[1].nombre}.png' alt=''></img>`;
+        },500);
+        console.log(contadorsuper1);
+       }
          
     }else if(random == 1){
         console.log('corredor2 avanza')
         avanzar2.style.width=`${seleccion[1].kms}em`;
+       if(frenada == 3){
+        seleccion[1].derrape();
+        corredores.innerHTML = `<img class="peque" src='img/${seleccion[0].nombre}.png' alt=''><img class="frenada" src='img/${seleccion[1].nombreFrenada}.png' alt=''></img>`;
+        avanzar2.style.width =`${seleccion[1].kms}em`;
+        contadorsuper2 ++;
+        setTimeout ( ()=>{
+        corredores.innerHTML = `<img class="peque" src='img/${seleccion[0].nombre}.png' alt=''><img class="frenada" src='img/${seleccion[1].nombre}.png' alt=''></img>`;
+        },500);
+        console.log(contadorsuper2);
+       }
     }
+
+
 
 };

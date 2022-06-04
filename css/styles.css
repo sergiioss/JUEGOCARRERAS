@@ -136,12 +136,12 @@ body{
 #cabezabarrasIzquierda{
     display: flex;
     height: 3em;
-    width: 3em;
+    width: 4em;
 }
 #cabezabarrasDerecha{
     display: flex;
     height: 3em;
-    width: 3em;
+    width: 4em;
 }
 
 #imagenbandera{
@@ -180,4 +180,8 @@ body{
     display: flex;
     height: 3em;
     width: 3em;
+}
+#super{
+    height: 5em;
+    width: 5em;
 }
