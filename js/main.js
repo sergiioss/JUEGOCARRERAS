@@ -19,20 +19,31 @@ let cabezabarrasDerecha = document.getElementById('marcadoresp2');
 let avanzar1 = document.getElementById('marcadoresp1');
 let avanzar2 = document.getElementById('marcadoresp2');
 let ganador = document.getElementById('ganador');
-let cambiocolorfrenada = document.getElementById('');
 let nombreganador = document.getElementById('nombreganador');
 let contadorsuper1 = 0;
 let contadorsuper2 = 0;
 let seleccion = [];
+
+console.log(this.kms);
+console.log(seleccion);
+console.log(contadorsuper1);
+console.log(contadorsuper2);
+
 
 const borrar = () =>{
     document.getElementById("mario").style.opacity = 1;
     document.getElementById("luigi").style.opacity = 1;
     document.getElementById("princesa").style.opacity = 1;
     document.getElementById("larry").style.opacity = 1;
+    seleccion[0].kms = 0;
+    seleccion[1].kms = 0;
+    contadorsuper1 = 0;
+    contadorsuper2 = 0;
+    avanzar1.style.width = `0em`;
+    avanzar2.style.width = `0em`;
     seleccion.splice(0,2);
     screenSwitch('pantalla1');
-}
+};
 
 const elige = (seleccionado) => {
         

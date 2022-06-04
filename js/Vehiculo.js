@@ -26,6 +26,9 @@ class Vehiculo{
         super(){
             this.kms = Math.floor(this.kms + 4);
         };
+        resetear(){
+            this.kms = 0;
+        };
 
 };
 
