@@ -108,7 +108,7 @@ const start = () => {
         }
      }
 
-    if(seleccion[random].kms >= 35){
+    if(seleccion[random].kms >= 25){
         console.log('ganador')
         setTimeout(()=>{
             ganador.innerHTML = `<img id="ganador" src='img/${seleccion[random].nombre}.gif' alt=''>`;

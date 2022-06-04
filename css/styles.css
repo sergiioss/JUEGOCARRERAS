@@ -113,7 +113,7 @@ body{
     align-items:flex-start;
     flex-direction: row;
     height: 80em;
-    width: 70em;
+    width: 50em;
 }
 #marcadoresp1{
     display: flex;
@@ -121,8 +121,8 @@ body{
     align-items: center;
     background-color: black;
     border-radius: 2em 2em 2em 2em;
-    height: 3em;
-    width: 2em;
+    height: 2em;
+    width: 1em;
 }
 #marcadoresp2{
     display: flex;
@@ -130,25 +130,25 @@ body{
     align-items: center;
     background-color: bisque;
     border-radius: 2em 2em 2em 2em;
-    height: 3em;
-    width: 2em;
+    height: 2em;
+    width: 1em;
 }
 #cabezabarrasIzquierda{
     display: flex;
-    height: 3em;
-    width: 4em;
+    height: 2em;
+    width: 3em;
 }
 #cabezabarrasDerecha{
     display: flex;
-    height: 3em;
-    width: 4em;
+    height: 2em;
+    width: 3em;
 }
 
 #imagenbandera{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20em;
+    height: 30em;
     width: 3em;
     background-image: url(/img/banderameta.png);
     background-size: cover;
@@ -158,7 +158,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 47em;
-    width: 10em;
+    width: 5em;
     background-image: url(/img/pedalesacelerar.png);
     background-size: cover; 
 }
@@ -190,5 +190,10 @@ body{
     display: flex;
     height: 15em;
     width: 15em;
+}
+#ganador{
+    display: flex;
+    height: 20em;
+    width: 20em;
 }
 
