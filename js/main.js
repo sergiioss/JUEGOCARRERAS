@@ -57,9 +57,9 @@ const elige = (seleccionado) => {
             opaco.style.opacity = 0.5;
             }
             setTimeout(()=>{
-            corredores.innerHTML = `<div class='hijoVersus'><img class="peque" src='.../img/${seleccion[0].nombre}.png' alt=''></div><div class='hijoVersus'><img class="peque" src='.../img/${seleccion[1].nombre}.png' alt=''></div>`;
-            cabezabarrasIzquierda.innerHTML = `<img id="cabezabarrasIzquierda" src='.../img/${seleccion[0].nombreFoto}.png'>`
-            cabezabarrasDerecha.innerHTML = `<img id="cabezabarrasDerecha" src='.../img/${seleccion[1].nombreFoto}.png'>`
+            corredores.innerHTML = `<div class='hijoVersus'><img class="peque" src='/JUEGOCARRERAS/img/${seleccion[0].nombre}.png' alt=''></div><div class='hijoVersus'><img class="peque" src='/JUEGOCARRERAS/img/${seleccion[1].nombre}.png' alt=''></div>`;
+            cabezabarrasIzquierda.innerHTML = `<img id="cabezabarrasIzquierda" src='/JUEGOCARRERAS/img/${seleccion[0].nombreFoto}.png'>`
+            cabezabarrasDerecha.innerHTML = `<img id="cabezabarrasDerecha" src='/JUEGOCARRERAS/img/${seleccion[1].nombreFoto}.png'>`
             },100);
         };
 
@@ -111,7 +111,7 @@ const start = () => {
     if(seleccion[random].kms >= 25){
         console.log('ganador')
         setTimeout(()=>{
-            ganador.innerHTML = `<img id="ganador" src='.../img/${seleccion[random].nombre}.gif' alt=''>`;
+            ganador.innerHTML = `<img id="ganador" src='/JUEGOCARRERAS/img/${seleccion[random].nombre}.gif' alt=''>`;
             nombreganador.innerHTML = seleccion[random].nombre;
         screenSwitch('pantalla4');
             
