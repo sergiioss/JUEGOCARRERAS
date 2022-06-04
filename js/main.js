@@ -57,9 +57,9 @@ const elige = (seleccionado) => {
             opaco.style.opacity = 0.5;
             }
             setTimeout(()=>{
-            corredores.innerHTML = `<div class='hijoVersus'><img class="peque" src='img/${seleccion[0].nombre}.png' alt=''></div><div class='hijoVersus'><img class="peque" src='img/${seleccion[1].nombre}.png' alt=''></div>`;
-            cabezabarrasIzquierda.innerHTML = `<img id="cabezabarrasIzquierda" src='img/${seleccion[0].nombreFoto}.png'>`
-            cabezabarrasDerecha.innerHTML = `<img id="cabezabarrasDerecha" src='img/${seleccion[1].nombreFoto}.png'>`
+            corredores.innerHTML = `<div class='hijoVersus'><img class="peque" src='/JUEGOCARRERAS/img/${seleccion[0].nombre}.png' alt=''></div><div class='hijoVersus'><img class="peque" src='/JUEGOCARRERAS/img/${seleccion[1].nombre}.png' alt=''></div>`;
+            cabezabarrasIzquierda.innerHTML = `<img id="cabezabarrasIzquierda" src='/JUEGOCARRERAS/img/${seleccion[0].nombreFoto}.png'>`
+            cabezabarrasDerecha.innerHTML = `<img id="cabezabarrasDerecha" src='/JUEGOCARRERAS/img/${seleccion[1].nombreFoto}.png'>`
             },100);
         };
 
@@ -71,12 +71,12 @@ const start = () => {
     if(random == 0 && contadorsuper1 >= 2){
         console.log('SUPER1')
         seleccion[0].super();
-        corredores.innerHTML = `<img id="super" src='img/${seleccion[0].nombreSuper}.png' alt=''></img><img class="peque" src='img/${seleccion[1].nombre}.png' alt=''>`;
+        corredores.innerHTML = `<img id="super" src='/JUEGOCARRERAS/img/${seleccion[0].nombreSuper}.png' alt=''></img><img class="peque" src='/JUEGOCARRERAS/img/${seleccion[1].nombre}.png' alt=''>`;
         avanzar1.style.width =`${seleccion[0].kms}em`;
     }else if(random == 1 && contadorsuper2 >= 2){
         console.log('SUPER2')
         seleccion[1].super();
-        corredores.innerHTML = `<img class="peque" src='img/${seleccion[0].nombre}.png' alt=''><img id="super" src='img/${seleccion[1].nombreSuper}.png' alt=''></img>`;
+        corredores.innerHTML = `<img class="peque" src='/JUEGOCARRERAS/img/${seleccion[0].nombre}.png' alt=''><img id="super" src='/JUEGOCARRERAS/img/${seleccion[1].nombreSuper}.png' alt=''></img>`;
         console.log(seleccion[1]);
         avanzar2.style.width =`${seleccion[1].kms}em`;
     }else if(random == 0 && contadorsuper1 < 2){
@@ -84,11 +84,11 @@ const start = () => {
         avanzar1.style.width =`${seleccion[0].kms}em`;
         if(frenada == 3){
          seleccion[0].derrape();
-         corredores.innerHTML = `<img class="peque" src='img/${seleccion[0].nombreFrenada}.png' alt=''><img class="peque" src='img/${seleccion[1].nombre}.png' alt=''></img>`;
+         corredores.innerHTML = `<img class="peque" src='/JUEGOCARRERAS/img/${seleccion[0].nombreFrenada}.png' alt=''><img class="peque" src='/JUEGOCARRERAS/img/${seleccion[1].nombre}.png' alt=''></img>`;
          avanzar1.style.width =`${seleccion[0].kms}em`;
          contadorsuper1++;
          setTimeout ( ()=>{
-         corredores.innerHTML = `<img class="peque" src='img/${seleccion[0].nombre}.png' alt=''><img class="peque" src='img/${seleccion[1].nombre}.png' alt=''></img>`;
+         corredores.innerHTML = `<img class="peque" src='/JUEGOCARRERAS/img/${seleccion[0].nombre}.png' alt=''><img class="peque" src='/JUEGOCARRERAS/img/${seleccion[1].nombre}.png' alt=''></img>`;
          },500);
          console.log(contadorsuper1);
         }
@@ -98,11 +98,11 @@ const start = () => {
          avanzar2.style.width=`${seleccion[1].kms}em`;
         if(frenada == 3){
          seleccion[1].derrape();
-         corredores.innerHTML = `<img class="peque" src='img/${seleccion[0].nombre}.png' alt=''><img class="peque" src='img/${seleccion[1].nombreFrenada}.png' alt=''></img>`;
+         corredores.innerHTML = `<img class="peque" src='/JUEGOCARRERAS/img/${seleccion[0].nombre}.png' alt=''><img class="peque" src='/JUEGOCARRERAS/img/${seleccion[1].nombreFrenada}.png' alt=''></img>`;
          avanzar2.style.width =`${seleccion[1].kms}em`;
          contadorsuper2++;
          setTimeout ( ()=>{
-         corredores.innerHTML = `<img class="peque" src='img/${seleccion[0].nombre}.png' alt=''><img class="peque" src='img/${seleccion[1].nombre}.png' alt=''></img>`;
+         corredores.innerHTML = `<img class="peque" src='/JUEGOCARRERAS/img/${seleccion[0].nombre}.png' alt=''><img class="peque" src='/JUEGOCARRERAS/img/${seleccion[1].nombre}.png' alt=''></img>`;
          },500);
          console.log(contadorsuper2);
         }
@@ -111,7 +111,7 @@ const start = () => {
     if(seleccion[random].kms >= 25){
         console.log('ganador')
         setTimeout(()=>{
-            ganador.innerHTML = `<img id="ganador" src='img/${seleccion[random].nombre}.gif' alt=''>`;
+            ganador.innerHTML = `<img id="ganador" src='/JUEGOCARRERAS/img/${seleccion[random].nombre}.gif' alt=''>`;
             nombreganador.innerHTML = seleccion[random].nombre;
         screenSwitch('pantalla4');
             
