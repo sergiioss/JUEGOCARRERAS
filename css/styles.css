@@ -10,7 +10,7 @@ body{
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    background-image: url(img/segundofondo.jpg);
+    background-image: url(../img/segundofondo.jpg);
     background-size: cover;
 }
 .imagenescoches{
@@ -61,7 +61,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(img/imagen_de_fondo.png);
+    background-image: url(../img/imagen_de_fondo.png);
     background-size: cover; 
 }
 .pulsaBotonSelect{
@@ -72,7 +72,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(img/fondo3.jpg);
+    background-image: url(../img/fondo3.jpg);
     background-size: cover;
 }
 .parteAbajo{
@@ -148,7 +148,7 @@ body{
     align-items: center;
     height: 30em;
     width: 3em;
-    background-image: url(img/banderameta.png);
+    background-image: url(../img/banderameta.png);
     background-size: cover;
 }
 #pedalesacelerar{
@@ -157,7 +157,7 @@ body{
     align-items: center;
     height: 47em;
     width: 5em;
-    background-image: url(img/pedalesacelerar.png);
+    background-image: url(../img/pedalesacelerar.png);
     background-size: cover; 
 }
 #pantalla4{
