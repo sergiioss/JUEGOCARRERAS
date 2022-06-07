@@ -57,9 +57,9 @@ const elige = (seleccionado) => {
             opaco.style.opacity = 0.5;
             }
             setTimeout(()=>{
-            corredores.innerHTML = `<div class='hijoVersus'><img class="peque" src='./JUEGOCARRERAS/img/${seleccion[0].nombre}.png' alt=''></div><div class='hijoVersus'><img class="peque" src='./JUEGOCARRERAS/img/${seleccion[1].nombre}.png' alt=''></div>`;
-            cabezabarrasIzquierda.innerHTML = `<img id="cabezabarrasIzquierda" src='./JUEGOCARRERAS/img/${seleccion[0].nombreFoto}.png'>`
-            cabezabarrasDerecha.innerHTML = `<img id="cabezabarrasDerecha" src='./JUEGOCARRERAS/img/${seleccion[1].nombreFoto}.png'>`
+            corredores.innerHTML = `<div class='hijoVersus'><img class="peque" src='./img/${seleccion[0].nombre}.png' alt=''></div><div class='hijoVersus'><img class="peque" src='./img/${seleccion[1].nombre}.png' alt=''></div>`;
+            cabezabarrasIzquierda.innerHTML = `<img id="cabezabarrasIzquierda" src='/JUEGOCARRERAS/img/${seleccion[0].nombreFoto}.png'>`
+            cabezabarrasDerecha.innerHTML = `<img id="cabezabarrasDerecha" src='/JUEGOCARRERAS/img/${seleccion[1].nombreFoto}.png'>`
             },100);
         };
 
